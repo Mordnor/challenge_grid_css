@@ -1,0 +1,44 @@
+#bbc{
+    display: grid;
+    background-color: black;
+    grid-template-areas: "header header header"
+                         "main main main"
+                         "aside aside aside"
+                         "footer footer footer"
+}
+
+header{
+    background-color: lightblue;
+    grid-area: header;
+}
+
+main{
+    background-color: lightgreen;
+    grid-area: main;
+}
+
+aside{
+    background-color: lightgrey;
+    grid-area: aside;
+}
+
+footer{
+    background-color: purple;
+    grid-area: footer;
+}
+
+// ===============================MEDIA============================== //
+
+@media screen and (min-width: 720px){
+
+    #bbc{
+        grid-template-columns: 1fr 6fr;
+        grid-template-areas: "header header header"
+                             "aside main main"
+                             "aside main main"
+                             "footer footer footer"
+    }
+
+
+
+}
