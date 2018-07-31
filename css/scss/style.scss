@@ -1,4 +1,5 @@
 #bbc{
+    width: 100%;
     display: grid;
     background-color: black;
     grid-template-areas: "header header header"
@@ -26,9 +27,41 @@ footer{
     background-color: purple;
     grid-area: footer;
 }
+.asideTop{
+    background-color: red;
+    display: grid;
+    grid-gap: 2em;
+    grid-area: asideTop;
 
+
+}
+.img2,.img1,.img3{
+    border: 2px solid black;
+}
+.asideRight{
+    background-color: blue;
+    grid-area: asideRight;
+}
+.mainArt{
+    grid-area: mainArt;
+}
 // ===============================MEDIA============================== //
 
+@media screen and (min-width: 500px){
+    .asideTop{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    main{
+        display: grid;
+        
+        grid-template-areas: "asideTop asideTop asideTop"
+                            "mainArt mainArt asideRight"
+                            "mainArt mainArt asideRight"
+    }
+
+}
 @media screen and (min-width: 720px){
 
     #bbc{
@@ -39,6 +72,11 @@ footer{
                              "footer footer footer"
     }
 
+    .asideTop{
+        grid-template-columns: repeat(3 , 1fr);
+        grid-template-rows: 1fr ;
+
+    }
 
 
 }
